@@ -1,0 +1,496 @@
+import 'package:flutter/material.dart';
+
+List<Map<String, dynamic>> dataProduk = [
+  {
+    'id': 1,
+    'produk': 'Beras Enak 10kg',
+    'image': 'assets/dashboard/beras_enak.png',
+    'harga': 110000,
+    'diskon': 120000,
+    'kategori': 'Rumah Tangga',
+  },
+  {
+    'id': 2,
+    'produk': 'Beras Enak 5kg',
+    'image': 'assets/dashboard/Frame_5.png',
+    'harga': 57500,
+    'diskon': 60000,
+    'kategori': 'Bahan Makanan',
+  },
+  {
+    'id': 3,
+    'produk': 'Minyak Goreng...',
+    'image': 'assets/dashboard/minyak_goreng.png',
+    'harga': 19500,
+    'diskon': 23000
+  },
+  {
+    'id': 4,
+    'produk': 'Sunlight',
+    'image': 'assets/dashboard/sunlight_hijau.png',
+    'harga': 15000,
+    'diskon': 15500,
+    'kategori': 'Rumah Tangga',
+  },
+  {
+    'id': 5,
+    'produk': 'Telur Ayam 1kg',
+    'image': 'assets/dashboard/telor_ayam.png',
+    'harga': 27000,
+    'diskon': 29000,
+    'kategori': 'Bahan Makanan'
+  },
+  {
+    'id': 6,
+    'produk': 'Gulaku Premium',
+    'image': 'assets/dashboard/gulaku_kuning.png',
+    'harga': 15500,
+    'diskon': 16500,
+    'kategori': 'Bahan Makanan',
+  },
+  {
+    'id': 7,
+    'produk': 'Palmia Margarine',
+    'image': 'assets/dashboard/palmia_margarine.png',
+    'harga': 7500,
+    'diskon': 16500,
+    'kategori': 'Bahan Makanan',
+  },
+  {
+    'id': 8,
+    'produk': 'Minyak Goreng...',
+    'image': 'assets/dashboard/dus_minyak.png',
+    'harga': 196000,
+    'diskon': 300000,
+    'kategori': 'Rumah Tangga',
+  },
+  {
+    'id': 9,
+    'produk': 'Telur Bebek',
+    'image': 'assets/dashboard/telor_bebek.png',
+    'harga': 2500,
+    'diskon': 29000,
+    'kategori': 'Bahan Makanan',
+  },
+  {
+    'id': 10,
+    'produk': 'Anggur ungu 1kg',
+    'image': 'assets/dashboard/anggur.jpg',
+    'harga': 20000,
+    'diskon': 25000,
+    'kategori': 'Produk Segar',
+  },
+  {
+    'id': 11,
+    'produk': 'Apel 1/4 kg segar dan manis',
+    'image': 'assets/dashboard/apel.jpg',
+    'harga': 30000,
+    'diskon': 33000,
+    'kategori': 'Produk Segar',
+  },
+  {
+    'id': 12,
+    'produk': 'Aqua 1 botol 600 liter',
+    'image': 'assets/dashboard/aqua.jpg',
+    'harga': 3000,
+    'diskon': 3500,
+    'kategori': 'Jajanan',
+  },
+  {
+    'id': 13,
+    'produk': 'Aqua 300 liter 1 botol',
+    'image': 'assets/dashboard/aqua_2.jpg',
+    'harga': 1500,
+    'diskon': 2000,
+    'kategori': 'Jajanan',
+  },
+  {
+    'id': 14,
+    'produk': 'Aqua 1 dus tipe 600',
+    'image': 'assets/dashboard/aqua_3.jpg',
+    'harga': 60000,
+    'diskon': 66000,
+    'kategori': 'Jajanan',
+  },
+  {
+    'id': 15,
+    'produk': 'Daging waghyu kotak kotak 5kg',
+    'image': 'assets/dashboard/daging.jpg',
+    'harga': 100000,
+    'diskon': 120000,
+    'kategori': 'Produk Segar',
+  },
+  {
+    'id': 16,
+    'produk': 'Frozen food laut ikan ikan',
+    'image': 'assets/dashboard/for_food_1.jpg',
+    'harga': 20000,
+    'diskon': 21000,
+    'kategori': 'Produk Beku',
+  },
+  {
+    'id': 17,
+    'produk': 'Frozen food paket hemat',
+    'image': 'assets/dashboard/fro_food_2.jpg',
+    'harga': 30000,
+    'diskon': 36000,
+    'kategori': 'Produk Beku',
+  },
+  {
+    'id': 18,
+    'produk': 'Frozwn Food tusuk',
+    'image': 'assets/dashboard/fro_food_3.jpg',
+    'harga': 28000,
+    'diskon': 30000,
+    'kategori': 'Produk Beku',
+  },
+  {
+    'id': 19,
+    'produk': 'Krirpik kripik 500gram',
+    'image': 'assets/dashboard/kripik.jpg',
+    'harga': 15000,
+    'diskon': 18000,
+    'kategori': 'Jajanan',
+  },
+  {
+    'id': 20,
+    'produk': 'Kirca daun jeruk pedas gurih mantap',
+    'image': 'assets/dashboard/kripik_2.jpg',
+    'harga': 15000,
+    'diskon': 16000,
+    'kategori': 'Jajanan',
+  },
+  {
+    'id': 21,
+    'produk': 'Kirca daun jeruk 1kg pedas gurih',
+    'image': 'assets/dashboard/kripik_3.jpg',
+    'harga': 35000,
+    'diskon': 40000,
+    'kategori': 'Jajanan',
+  },
+  {
+    'id': 22,
+    'produk': 'Pisang 1/5kg',
+    'image': 'assets/dashboard/pisang.jpg',
+    'harga': 20000,
+    'diskon': 23000,
+    'kategori': 'Produk Segar',
+  },
+  {
+    'id': 23,
+    'produk': 'Susu murni dari isekai',
+    'image': 'assets/dashboard/susu.jpg',
+    'harga': 100000,
+    'diskon': 300000,
+    'kategori': 'Susu Telur',
+  },
+  {
+    'id': 24,
+    'produk': 'teh thai teaaa',
+    'image': 'assets/dashboard/tea.jpg',
+    'harga': 10000,
+    'diskon': 12000,
+    'kategori': 'Jajanan',
+  },
+  {
+    'id': 25,
+    'produk': 'telur ayam ayaman 1kg',
+    'image': 'assets/dashboard/telur_1.jpg',
+    'harga': 35000,
+    'diskon': 37000,
+    'kategori': 'Susu Telur',
+  },
+  {
+    'id': 26,
+    'produk': 'Telur ayam 1/5kg',
+    'image': 'assets/dashboard/telur_2.jpg',
+    'harga': 15000,
+    'diskon': 17000,
+    'kategori': 'Susu Telur',
+  },
+  {
+    'id': 27,
+    'produk': 'Yogurt kecil manis asem',
+    'image': 'assets/dashboard/yogurt.jpg',
+    'harga': 5000,
+    'diskon': 6500,
+    'kategori': 'Jajanan',
+  },
+  {
+    'id': 27,
+    'produk': 'Yogurt botol kecil',
+    'image': 'assets/dashboard/yogurt_2.jpg',
+    'harga': 8000,
+    'diskon': 8500,
+    'kategori': 'Jajanan',
+  },
+];
+
+List<Map<String, dynamic>> cartList = [
+  {
+    'produk': 'Minyak Goreng...',
+    'image': 'assets/dashboard/dus_minyak.png',
+    'harga': 'Rp.196.000',
+    'diskon': 'Rp.300.000'
+  },
+  {
+    'produk': 'Telur Bebek',
+    'image': 'assets/dashboard/telor_bebek.png',
+    'harga': 'Rp.32.500',
+    'diskon': 'Rp.29.000'
+  },
+];
+
+List<Map<String, dynamic>> cartProduct = [];
+
+List<Map<String, dynamic>> checkoutList = [];
+
+List<Map<String, dynamic>> shippingCostList = [
+  {
+    'id': '1',
+    'name': 'Cod',
+    'cost': 10000,
+  },
+  {
+    'id': '2',
+    'name': 'Pickup ke toko',
+    'cost': 0,
+  },
+  {
+    'id': '3',
+    'name': 'Fast flash',
+    'cost': 150000,
+  }
+];
+
+List<Map<String, dynamic>> orderList = [
+  {
+    'id': 1,
+    'produk': 'Telur Bebek',
+    'image': 'assets/dashboard/telor_bebek.png',
+    'qty': 1,
+    'total': 29000,
+    'status': 'Selesai',
+    'invoice': 'igbiuiu87688hjbjh',
+    'pengiriman': 'Pos',
+    'alamat':
+        'Konohagakure Jl.GreenLine No.112 Rt/Rw 009/002, Kel.Atlantis, Kec.Pacific atas',
+    'pembayaran': 'bca',
+    'biaya admin': '0',
+    'biaya pengiriman': '0',
+  },
+  {
+    'id': 2,
+    'produk': 'Telur Bebek Premium',
+    'image': 'assets/dashboard/telor_bebek.png',
+    'qty': 1,
+    'total': 40000,
+    'status': 'Selesai',
+    'invoice': 'igbiuiu87688hjbjh',
+    'pengiriman': 'Pos',
+    'alamat':
+        'Konohagakure Jl.GreenLine No.112 Rt/Rw 009/002, Kel.Atlantis, Kec.Pacific atas',
+    'pembayaran': 'bsm',
+    'biaya admin': '0',
+    'biaya pengiriman': '0',
+  },
+  {
+    'id': 3,
+    'produk': 'Telur Bebek Murah Meriah',
+    'image': 'assets/dashboard/telor_bebek.png',
+    'qty': 1,
+    'total': 10000,
+    'status': 'Selesai',
+    'invoice': 'igbiuiu87688hjbjh',
+    'pengiriman': 'Pos',
+    'alamat':
+        'Konohagakure Jl.GreenLine No.112 Rt/Rw 009/002, Kel.Atlantis, Kec.Pacific atas',
+    'pembayaran': 'bni',
+    'biaya admin': '0',
+    'biaya pengiriman': '0',
+  },
+  {
+    'id': 4,
+    'produk': 'Palmia Margarine',
+    'image': 'assets/dashboard/palmia_margarine.png',
+    'qty': 2,
+    'total': 15000,
+    'status': 'Dibatalkan',
+    'invoice': 'igbiuiu87688hjbjh',
+    'pengiriman': 'Pos',
+    'alamat':
+        'Konohagakure Jl.GreenLine No.112 Rt/Rw 009/002, Kel.Atlantis, Kec.Pacific atas',
+    'pembayaran': 'mandiri',
+    'biaya admin': '0',
+    'biaya pengiriman': '0',
+  },
+  {
+    'id': 5,
+    'produk': 'Gulaku Kuning',
+    'image': 'assets/dashboard/gulaku_kuning.png',
+    'qty': 1,
+    'total': 15500,
+    'status': 'Dibatalkan',
+    'invoice': 'igbiuiu87688hjbjh',
+    'pengiriman': 'Pos',
+    'alamat':
+        'Konohagakure Jl.GreenLine No.112 Rt/Rw 009/002, Kel.Atlantis, Kec.Pacific atas',
+    'pembayaran': 'bca',
+    'biaya admin': '0',
+    'biaya pengiriman': '0',
+  },
+  {
+    'id': 6,
+    'produk': 'Gulaku Kuning',
+    'image': 'assets/dashboard/gulaku_kuning.png',
+    'qty': 2,
+    'total': 31000,
+    'status': 'Order Berjalan',
+    'invoice': 'igbiuiu87688hjbjh',
+    'pengiriman': 'Pos',
+    'alamat':
+        'Konohagakure Jl.GreenLine No.112 Rt/Rw 009/002, Kel.Atlantis, Kec.Pacific atas',
+    'pembayaran': 'bca',
+    'biaya admin': '0',
+    'biaya pengiriman': '0',
+  },
+  {
+    'id': 7,
+    'produk': 'Telur Bebek Murah Meriah',
+    'image': 'assets/dashboard/telor_bebek.png',
+    'qty': 1,
+    'total': 10000,
+    'status': 'Order Berjalan',
+    'invoice': 'igbiuiu87688hjbjh',
+    'pengiriman': 'Pos',
+    'alamat':
+        'Konohagakure Jl.GreenLine No.112 Rt/Rw 009/002, Kel.Atlantis, Kec.Pacific atas',
+    'pembayaran': 'bni',
+    'biaya admin': '0',
+    'biaya pengiriman': '0',
+  },
+];
+
+List<Map<String, dynamic>> paymentMethodList = [
+  {
+    "id": 1,
+    "image": 'assets/BANKCODE/gopay.png',
+    "name": 'Gopay',
+    "cost": 0,
+    "selected": true,
+    "selected method": '',
+  },
+  {
+    "id": 2,
+    "image": 'assets/baz_icons/baz_wallet.png',
+    "name": 'Transfer Bank',
+    "cost": 4000,
+    "selected": false,
+    "selected method": '',
+  },
+  {
+    "id": 3,
+    "image": 'assets/baz_icons/baz_wallet.png',
+    "name": 'Virtual Account Bank',
+    "cost": 2000,
+    "selected": false,
+    "selected method": '',
+  },
+];
+
+List<Map<String, dynamic>> bankList = [
+  {
+    'id': 1,
+    'code': 'bca',
+    'name': 'BCA',
+  },
+  {
+    'id': 2,
+    'code': 'bni',
+    'name': 'BNI',
+  },
+  {
+    'id': 3,
+    'code': 'bri',
+    'name': 'BRI',
+  },
+  {
+    'id': 4,
+    'code': 'bsm',
+    'name': 'BSM',
+  },
+  {
+    'id': 5,
+    'code': 'cimb',
+    'name': 'Cimbniaga',
+  },
+  {
+    'id': 6,
+    'code': 'danamon',
+    'name': 'Danamon',
+  },
+  {
+    'id': 7,
+    'code': 'dbs',
+    'name': 'DBS',
+  },
+  {
+    'id': 8,
+    'code': 'mandiri',
+    'name': 'Mandiri',
+  },
+  {
+    'id': 9,
+    'code': 'muamalat',
+    'name': 'Muamalat',
+  },
+  {
+    'id': 10,
+    'code': 'permata',
+    'name': 'Permata',
+  },
+  {
+    'id': 11,
+    'code': 'tabungan_pensiunan_nasional',
+    'name': 'BTPN',
+  },
+];
+
+List<Map<String, dynamic>> kategoriList = [
+  {
+    'id': 1,
+    'name': 'Bahan Makanan',
+    'code': 'Bahan Makanan',
+    'image': 'assets/dashboard/bahan_makanan.png',
+  },
+  {
+    'id': 2,
+    'name': 'Peroduk Segar',
+    'code': 'Produk Segar',
+    'image': 'assets/dashboard/product_fresh.png',
+  },
+  {
+    'id': 3,
+    'name': 'Rumah Tangga',
+    'code': 'Rumah Tangga',
+    'image': 'assets/dashboard/rumah_tangga.png',
+  },
+  {
+    'id': 4,
+    'name': 'Olahan Susu & telur',
+    'code': 'Susu Telur',
+    'image': 'assets/dashboard/susu_telur.png',
+  },
+  {
+    'id': 5,
+    'name': 'Minuman Kopi dan Cemilan',
+    'code': 'Jajanan',
+    'image': 'assets/dashboard/minuman_soda.png',
+  },
+  {
+    'id': 6,
+    'name': 'Produk Beku',
+    'code': 'Produk Beku',
+    'image': 'assets/dashboard/Frozen_Food.png',
+  },
+];

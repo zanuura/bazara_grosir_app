@@ -1,0 +1,11 @@
+BCA:      http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/bca.png
+BNI:      http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/bni.png
+BRI:      http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/bri.png
+BSI:      http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/bsi.png
+BTPN:     http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/btpn.png
+CIMB:     http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/cimb.png
+Danamon:  http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/danamon.png
+Digibank: http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/digibank.png
+Mandiri:  http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/mandiri.png
+Muamalat: http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/muamalat.png
+Permata:  http://bazaraid.nos.wjv-1.neo.id/bazara/static/bank/permata.png
